@@ -18,11 +18,11 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
+ const HDWalletProvider = require('@truffle/hdwallet-provider');
+ const infuraKey = "baa22203fbb24b10a259370934e88925";
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+ 
+ const mnemonic = "crunch catalog fancy mirror giraffe guilt soon flash oppose flock lawn pelican"
 
 module.exports = {
   /**
@@ -58,14 +58,15 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    // ropsten: {
-    // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
-    // network_id: 3,       // Ropsten's id
-    // gas: 5500000,        // Ropsten has a lower block limit than mainnet
-    // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    ropsten: {
+     provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/7fd3ac228c474b269d17e5178a83b021`),
+     network_id: 3,       // Ropsten's id
+     gas: 5500000,        // Ropsten has a lower block limit than mainnet
+     confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+     timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+     skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets )
+     //from:'0x2A9C4AA29Fc88107334856866870102FdABBAA6e'//0x2A9C4AA29Fc88107334856866870102FdABBAA6e
+     },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
